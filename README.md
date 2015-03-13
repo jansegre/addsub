@@ -2,6 +2,10 @@ Small demo of RPC for Distributed Systems class.
 
     make
 
+You may have to start rcpbind:
+
+    sudo rpcbind
+
 Run server:
 
     ./server
