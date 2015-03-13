@@ -3,13 +3,13 @@
 all: server client
 
 server: addsub.h server.c addsub_svc.o addsub_xdr.o
-	$(CC) $(CFLAGS) -o server server.c addsub_svc.c addsub_xdr.c
+	$(CC) $(CFLAGS) -o server server.c addsub_svc.o addsub_xdr.o
 
 client: addsub.h client.c addsub_clnt.o addsub_xdr.o
-	$(CC) $(CFLAGS) -o client client.c addsub_clnt.c addsub_xdr.c
+	$(CC) $(CFLAGS) -o client client.c addsub_clnt.o addsub_xdr.o
 
 %.o: %.c addsub.h
-	$(CC) -c $(CFLAGS) -o $@ $<
+	$(CC) -w -c $(CFLAGS) -o $@ $<
 
 addsub.h:
 	rpcgen -C addsub.x

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "addsub.h"
 
 /* função que chama a RPC add_1 */
