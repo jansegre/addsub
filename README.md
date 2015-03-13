@@ -15,3 +15,7 @@ Should output:
 
     100 + 200 = 300
     100 - 200 = -100
+
+Don't forget to close the server when you're done:
+
+    killall server
